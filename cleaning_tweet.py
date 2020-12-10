@@ -31,8 +31,8 @@ def process_text(text): #clean text
 	tokenized_text = nltk.word_tokenize(text) #tokenize
 	#Déclaration des stops words dans une variable
 	stop_words = stopwords.words('english')
-	#Par cette méthode, on garde tous les mots présents dans la liste des stop words 
-	#et on élimine tous les petits mots parasites (the, is, an, and...)
+	#Par cette méthode, on garde supprime les mots présents dans la liste des stop words 
+	#et on élimine ainsi tous les petits mots parasites (the, is, an, and...)
 	clean_text = [
 	word for word in tokenized_text
 	if word not in stop_words ] 
