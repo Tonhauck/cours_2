@@ -6,11 +6,13 @@ import numpy as np
 from PIL import Image
 from os import path
 
-#lecture du csv
+#lecture du csv 
+#A MODIFIER
 df = pd.read_csv('fichiers/all_tweets_realDonaldTrump_cleaned.csv')
 #champs clean => liste de mot
 temp=' '.join(df['cleaned_tweets'].tolist())
-#importation du png qui servira pour le mask (N&B)
+#importation du png qui servira pour le mask (N&B) 
+#A MODIFIER
 wine_mask = np.array(Image.open("img/trump.png"))
 
 #reshape du mask pour éviter les erreur de géométrie et améliorer la détection de la figure
@@ -26,7 +28,8 @@ wc = WordCloud(width=1000,height=1000, background_color="white", max_words=1000,
 # Generate a wordcloud
 wc.generate(temp)
 
-# store to file
+# store to file 
+#A MODIFIER
 wc.to_file("trump_word.png")
 
 # show
