@@ -47,9 +47,11 @@ def process_text(text): #clean text
 
 
 #lecture du csv 
+# A MODIFIER
 df = pd.read_csv('fichiers/all_tweets_realDonaldTrump.csv')
 #creation d'un champ clean contenant le text stemminisé
 df['cleaned_tweets']=df['tweet'].apply(lambda x: process_text(x))
 #sauvegarde du csv
+#A MODIFIER
 df.to_csv('fichiers/all_tweets_realDonaldTrump_cleaned.csv', index=False, encoding='utf-8-sig',quotechar='"',
                      quoting=csv.QUOTE_NONNUMERIC)
